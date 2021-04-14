@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 
 function Room()
 {
-    const [isLit, setLit] = useState(true);
+    const [isLit, setLit] = useState(false);
 
     return(
         <div>
-            This is Room Component.
+            This Room is Lit = {isLit ? "lit" : "dark"}
         </div>
     );
 }
