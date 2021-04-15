@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
+import './Room.css';
 
 function Room()
 {
     let [isLit, setLit] = useState(false);
     let [age, setAge] = useState(15);
+
+    let name = 'Hello ${isLit} World';
 
     function updateLit()
     {
@@ -18,13 +21,16 @@ function Room()
     }
 
     return(
-        <div>
+        <div className={'room ${isLit?"lit":"dark"}'} >
             This Room is Lit = {isLit ? "lit" : "dark"}
             <br/>
             Age: {age};
             <br/>
-            <button onClick={updateLit}>Toggle Light</button>
+            Name: {name};
             <br/>
+            <button onClick={updateLit}>Toggle Light</button>
+            
+            <br/> 
             <button onClick={inceaseAge}>Increase Age</button>
         </div>
     );

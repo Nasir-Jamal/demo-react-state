@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+
 function Room_Function_Restructuring()
 {
 let [isLit, setLit] = useState(false); //Array restructuring
